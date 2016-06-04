@@ -1,0 +1,34 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 414
+  ClientWidth = 614
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnShow = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Shape1: TShape
+    Left = 312
+    Top = 184
+    Width = 65
+    Height = 65
+    Shape = stCircle
+  end
+  object Button1: TButton
+    Left = 544
+    Top = 392
+    Width = 75
+    Height = 25
+    Caption = 'Start'
+    TabOrder = 0
+    OnClick = Start
+  end
+end

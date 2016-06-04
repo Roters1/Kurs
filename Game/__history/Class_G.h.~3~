@@ -1,0 +1,22 @@
+//---------------------------------------------------------------------------
+
+#ifndef Class_GH
+#define Class_GH
+#include <Vcl.Graphics.hpp>
+//---------------------------------------------------------------------------
+class Tpoit{
+	public:
+		int x,y;
+};
+
+class Game_P{
+	public:
+		Tpoit p;
+		int color[3];
+		int h,w;
+		int hp,wp ;
+		TCanvas *device;
+		void draw();
+		void draw_ani():
+};
+#endif

@@ -1,0 +1,133 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  HorzScrollBar.Color = clHotLight
+  HorzScrollBar.ParentColor = False
+  VertScrollBar.Color = clBlue
+  VertScrollBar.ParentColor = False
+  Caption = 'Start'
+  ClientHeight = 194
+  ClientWidth = 402
+  Color = clSilver
+  TransparentColorValue = clRed
+  Constraints.MaxHeight = 233
+  Constraints.MaxWidth = 418
+  Constraints.MinHeight = 233
+  Constraints.MinWidth = 418
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 373
+    Top = 8
+    Width = 12
+    Height = 23
+    HelpType = htKeyword
+    Caption = '1'
+    Color = clActiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 289
+    Top = 8
+    Width = 78
+    Height = 23
+    AutoSize = False
+    Caption = 'Levels::'
+    EllipsisPosition = epWordEllipsis
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 289
+    Top = 37
+    Width = 78
+    Height = 23
+    AutoSize = False
+    Caption = 'Levels::'
+    EllipsisPosition = epWordEllipsis
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    Visible = False
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 8
+    Width = 75
+    Height = 57
+    Caption = 'LVL _ 1'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 89
+    Top = 8
+    Width = 75
+    Height = 57
+    Caption = 'LVL _ 2'
+    Enabled = False
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 170
+    Top = 8
+    Width = 75
+    Height = 57
+    Caption = 'LVL _ 3'
+    TabOrder = 2
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 8
+    Top = 71
+    Width = 75
+    Height = 58
+    Caption = 'LVL _4'
+    Enabled = False
+    TabOrder = 3
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 89
+    Top = 71
+    Width = 312
+    Height = 58
+    Caption = 'Hellp'
+    Font.Charset = MAC_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -53
+    Font.Name = 'Swis721 BT'
+    Font.Pitch = fpFixed
+    Font.Style = [fsBold, fsItalic]
+    Font.Quality = fqAntialiased
+    ParentFont = False
+    TabOrder = 4
+    OnClick = Button5Click
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 248
+    Top = 8
+  end
+end

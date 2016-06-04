@@ -1,0 +1,136 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "LVL_2.h"
+#include "Class_G.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm2 *Form2;
+Game_P Drav;
+bool Start_1 =false;
+bool Start_2 =false;
+bool Start_3 =false;
+
+//---------------------------------------------------------------------------
+__fastcall TForm2::TForm2(TComponent* Owner)
+	: TForm(Owner)
+{
+
+ Drav.device = Form2->Canvas;
+ Drav.p.x = 0;
+ Drav.p.x = 0;
+
+ Drav.h = 100;
+ Drav.w = 100;
+ Drav.hp = Drav.h/10;
+ Drav.wp = Drav.w/10 ;
+
+  Drav.draw();
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm2::Button1Click(TObject *Sender)
+{
+Drav.draw();
+Button1->Enabled = false;
+Shape1->Visible = true;
+Shape2->Visible = true;
+Shape3->Visible = true;
+Shape4->Visible = true;
+Shape5->Visible = true;
+Shape6->Visible = true;
+Shape7->Visible = true;
+Shape8->Visible = true;
+Shape9->Visible = true;
+Shape10->Visible = true;
+Shape11->Visible = true;
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm2::FormClose(TObject *Sender, TCloseAction &Action)
+{
+  Button1->Enabled = true;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm2::FormMouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+
+if(Start_1){
+Shape1->Top = Y;
+Shape1->Left = X;
+Drav.draw();
+}
+if(Start_2){
+Shape2->Top = Y;
+Shape2->Left = X;
+Drav.draw();
+}
+if(Start_3){
+Shape3->Top = Y;
+Shape3->Left = X;
+Drav.draw();
+}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm2::Shape2MouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
+		  int X, int Y)
+{
+	if(!Start_2){
+Start_2 = true;
+
+}
+
+else Start_2 = false ;
+//4
+if(Shape1->Top <= Shape4->Top+10 && Shape1->Top >= Shape4->Top-10  )
+{
+	if(Shape1->Left <= Shape4->Left+10 ){
+	Shape4->Brush->Color = 	Shape1->Brush->Color ;
+	}
+	else{
+   Shape4->Brush->Color =  clWhite;
+}
+}
+
+else if (Shape2->Left <= Shape4->Left+10 && Shape2->Left >= Shape4->Left-10  )
+{
+	if(Shape2->Top <= Shape4->Top+10 ){
+	Shape4->Brush->Color = 	Shape2->Brush->Color ;
+	}
+
+
+	else{
+   Shape4->Brush->Color =  clWhite;
+}
+}
+else{
+   Shape4->Brush->Color =  clWhite;
+}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm2::Shape3MouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
+		  int X, int Y)
+{
+if(!Start_3){
+Start_3 = true;
+
+}
+
+else Start_3 = false ;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm2::Shape1MouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
+		  int X, int Y)
+{
+if(!Start_1){
+Start_1 = true;
+
+}
+
+else Start_1 = false ;
+}
+//---------------------------------------------------------------------------
